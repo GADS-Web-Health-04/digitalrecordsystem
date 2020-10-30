@@ -1166,4 +1166,104 @@ button.ghost {
     padding: 0 10px;
   }
 }
+
+.dashboard a {
+  width: 100%;
+  font-size: calc(10px + 0.5vw);
+  background-color: none;
+  background-image: none;
+  color: black;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dashboard a > * {
+  padding: 10px;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+}
+
+.dashboard a:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#32c8fa), to(#587de4));
+  background: linear-gradient(270deg, #32c8fa 0%, #587de4 100%);
+}
+
+.add-record .add-record-container {
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.add-record .add-record-container input,
+.add-record .add-record-container select,
+.add-record .add-record-container textarea {
+  border: 1px solid #32c8fa;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 70%;
+  border-radius: 30px;
+}
+
+.add-record .add-record-container input:focus,
+.add-record .add-record-container select:focus,
+.add-record .add-record-container textarea:focus {
+  outline: none;
+}
+
+.my-records #bar-chart {
+  width: 50vw;
+  margin: auto;
+}
+
+.my-records #bar-chart canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.my-records select {
+  border: 1px solid #32c8fa;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.my-records select:focus {
+  outline: none;
+}
+
+.my-records .choose-chart {
+  margin: 60px auto;
+}
+
+.my-records button {
+  margin-top: 10px;
+  width: 150px;
+}
+
+.my-records-container table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.my-records-container td,
+.my-records-container th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.my-records-container tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.records-details {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.records-details h2,
+.records-details p {
+  margin-left: 40px;
+}
 /*# sourceMappingURL=App.css.map */

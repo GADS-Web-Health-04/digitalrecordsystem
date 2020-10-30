@@ -1148,3 +1148,100 @@ button.ghost {
 		padding: 0 10px;
 	}
 }
+
+.dashboard {
+	a {
+		width: 100%;
+		font-size: calc(10px + 0.5vw);
+		background-color: none;
+		background-image: none;
+		color: black;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	a > * {
+		padding: 10px;
+		flex-basis: 100px;
+	}
+
+	a:hover {
+		background: linear-gradient(270deg, #32c8fa 0%, #587de4 100%);
+	}
+}
+
+.add-record {
+	.add-record-container {
+		margin-left: 30px;
+		margin-top: 50px;
+		input,
+		select,
+		textarea {
+			border: 1px solid #32c8fa;
+			padding: 12px 15px;
+			margin: 8px 0;
+			width: 70%;
+			border-radius: 30px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+.my-records {
+	#bar-chart {
+		width: 50vw;
+		margin: auto;
+
+		canvas {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	select {
+		border: 1px solid #32c8fa;
+		padding: 12px 15px;
+		margin: 8px 0;
+		width: 100%;
+		border-radius: 30px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.choose-chart {
+		margin: 60px auto;
+	}
+	button {
+		margin-top: 10px;
+		width: 150px;
+	}
+}
+
+.my-records-container {
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 80%;
+	}
+
+	td,
+	th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	}
+
+	tr:nth-child(even) {
+		background-color: #dddddd;
+	}
+}
+.records-details {
+	margin-top: 30px;
+	margin-left: 40px;
+	h2,
+	p {
+		margin-left: 40px;
+	}
+}

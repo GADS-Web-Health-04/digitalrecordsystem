@@ -4,6 +4,11 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Login from "./Pages/Login";
 import Contact from './Pages/Contact';
+import Dashboard from "./Pages/Dashboard";
+import AddRecord from "./Pages/AddRecord";
+import MyRecords from"./Pages/MyRecords";
+import Visualise from "./Pages/Visualise";
+import Avemaria from "./Pages/Avemaria";
 import Error from "./Error";
 import './App.css';
 import AOS from 'aos';
@@ -45,6 +50,16 @@ componentDidMount(){
                 <Contact {...renderprops} />} />
               <Route path="/login" render={renderprops =>
                 <Login {...renderprops} />} />
+                <Route path="/dashboard" render={renderprops =>
+                  <Dashboard {...renderprops} />} />
+                <Route path="/add-record" render={renderprops =>
+                    <AddRecord {...renderprops} />} />
+                <Route path="/my-records" render={renderprops =>
+                    <MyRecords {...renderprops} />} />
+                <Route path="/visualise" render={renderprops =>
+                    <Visualise {...renderprops} />} />
+                    <Route path="/avemaria-anders" render={renderprops =>
+                        <Avemaria {...renderprops} />} />
               <Route render={renderprops =>
                 <Error {...renderprops} />} />
           </Switch>

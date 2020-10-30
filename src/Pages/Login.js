@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Redirect } from "react-router-dom";
 import Footer from './Footer';
 
 const Login = () => {
+
+  const [ redirect, setRedirect ] = useState(null);
+
     useEffect(() => {
       const signUpButton = document.getElementById('signUp');
       const signInButton = document.getElementById('signIn');
@@ -18,7 +22,38 @@ const Login = () => {
 
       }
     })
-    return (
+    useEffect(() => {
+      const form = document.getElementById('sign-in-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+      const formData = new FormData(form);
+        const email = formData.get('email');
+        const password = formData.get('password');
+        console.log(email)
+        console.log(password)
+        if (email === 'admin@gmail.com' && password === 'medrecadmin'){
+          setRedirect('/dashboard');
+        }
+      return () => {
+        form.removeEventListener('submit', (e) => {
+        e.preventDefault();
+      const formData = new FormData(form);
+        const email = formData.get('email');
+        const password = formData.get('password');
+        console.log(email)
+        console.log(password)
+        if (email === 'admin@gmail.com' && password === 'medrecadmin'){
+          setRedirect('/dashboard');
+        }
+      }
+      )
+    }}, []);
+  });
+
+    if (redirect !== null){
+      return <Redirect to={redirect} />
+    }
+    else return (
     <>
     <div className="single-page">
     <header className="site-header">
@@ -83,7 +118,7 @@ const Login = () => {
         </div>
 
         <div className="form-container sign-in-container">
-        <form action="#">
+        <form id="sign-in-form">
             <h1>Sign In</h1>
             <div className="social-container">
               <a href="#fab" className="social"><i className="fa fa-facebook"></i></a>
@@ -91,8 +126,8 @@ const Login = () => {
               <a href="#fab" className="social"><i className="fa fa-linkedin"></i></a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
             <a href="#ab">Forgot your password?</a>
             <button type="submit">Sign In</button>
           </form>
